@@ -23,3 +23,15 @@
     @apply flex justify-between items-center;
   }
 }
+
+.animate-move {
+  animation: move 3s infinite ease alternate;
+}
+@keyframes move {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(10px);
+  }
+}
