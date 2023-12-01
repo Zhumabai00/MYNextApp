@@ -1,7 +1,6 @@
 import Link from "next/link"
 import { FC } from "react"
 
-
 interface BtProps {
 	text: string
 	url: string

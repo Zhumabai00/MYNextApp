@@ -47,8 +47,8 @@ export default function NavBar() {
 		console.log("Logged out")
 	}
 	return (
-		<nav className="basicFlex py-5 bg-primary">
-			<Link className="bold text-xl" href={`/`}>MYApp</Link>
+		<nav className="basicFlex py-5 ">
+			<Link className="bold text-xl " href={`/`}>MYApp</Link>
 			<div>
 				<ul className="basicFlex gap-4">
 					{links.map(link => (
