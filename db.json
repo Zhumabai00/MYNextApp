@@ -1,0 +1,25 @@
+{
+	"posts": [
+		{
+			"id": 1,
+			"name": " Zhumabai",
+			"img": " dtfyguhjkl;jhkj",
+			"desc": " desc",
+			"title": " title"
+		},
+		{
+			"id": 2,
+			"name": " Zhumabai",
+			"img": " dtfyguhjkl;jhkj",
+			"desc": " desc",
+			"title": " title"
+		},
+		{
+			"id": 3,
+			"name": " Zhumabai",
+			"img": " dtfyguhjkl;jhkj",
+			"desc": " desc",
+			"title": " NEwTitLe"
+		}
+	]
+}

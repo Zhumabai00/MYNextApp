@@ -35,8 +35,8 @@ const Category: NextPage<MyPageProps> = ({ params }) => {
 		<div className={''}>
 			<h1 className={'text-[#53c28b]'}>{params.category}</h1>
 			{data.map((item) => (
-				<div className={'nth-child-odd:flex-row-reverse'} key={item.id}>
-					<div className={'flex-1 flex flex-col gap-20 justify-center'}>
+				<div className={'odd:flex-row-reverse flex gap-[50px] mt-12 mb-24'} key={item.id}>
+					<div className={'flex-[1] flex flex-col gap-[20px] justify-center'}>
 						<h1 className={'text-5xl'}>{item.title}</h1>
 						<p className={'text-xl'}>{item.desc}</p>
 						<Button text="See More" url="#" />

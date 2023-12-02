@@ -30,7 +30,7 @@ export default function Portfolio() {
 						<span className={'absolute right-[10px] bottom-[10px] text-4xl font-bold title'}>Websites</span>
 					</Tilt>
 				</Link>
-				<Link href="/portfolio/application" className={'rounded-[5px] w-[300px] h-[400px] relative border-[#bbb] border-[5px]'}>
+				<Link href="/portfolio/applications" className={'rounded-[5px] w-[300px] h-[400px] relative border-[#bbb] border-[5px]'}>
 					<Tilt
 						options={{
 							scale: 1,

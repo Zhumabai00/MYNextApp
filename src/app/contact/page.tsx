@@ -11,7 +11,7 @@ export default function Contact() {
 						src="/contact.png"
 						alt="contacts"
 						fill={true}
-						className={'object-contain animate-moveCon'}
+						className={'object-fill animate-moveCon'}
 					/>
 				</div>
 				<form className={'flex-[1] flex flex-col gap-[20px]'}>
