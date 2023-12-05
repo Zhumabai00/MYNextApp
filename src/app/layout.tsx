@@ -3,9 +3,6 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import NavBar from '@/components/navbar/NavBar'
 import Footer from '@/components/footer/Footer'
-import { Provider } from 'react-redux'
-import { AppStore, setupStore } from '@/store/store'
-import { useRef } from 'react'
 import StoreProvider from '@/store/StoreProvider'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -19,12 +16,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  // const store = setupStore();
-
-  // return <Provider store={storeRef.current}>{children}</Provider>
   return (
     <html lang="en">
-      {/* <Provider store={storeRef.current}> */}
       <body className={inter.className}>
         <div className="container">
           <NavBar />
@@ -34,7 +27,6 @@ export default function RootLayout({
           <Footer />
         </div>
       </body>
-      {/* </Provider> */}
     </html>
   )
 }

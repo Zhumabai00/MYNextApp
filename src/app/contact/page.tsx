@@ -1,6 +1,39 @@
 import Button from "@/components/button/Button";
 import Image from "next/image";
 
+
+// import { Metadata } from "next"
+
+// interface IDataProps {
+// 	params: {
+// 		id: number
+// 	}
+// }
+// const getData = async (id: number) => {
+// 	const response = await fetch(`http://localhost:3002/posts/${id}`, {
+// 		cache: "no-store",
+// 	})
+// 	// if (!response.ok) {
+// 	// 	throw new Error("Failed to fetch data");
+
+// 	// }
+// 	return response.json()
+// }
+// export async function generateMetadata({ params }: IDataProps): Promise<Metadata> {
+// 	const post = await getData(params.id)
+// 	return {
+// 		title: post.title,
+// 	}
+// }
+
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+	title: '...',
+	description: '...',
+}
+
+
 export default function Contact() {
 	return (
 		<div className={" "}>
@@ -19,7 +52,6 @@ export default function Contact() {
 					<input type="text" placeholder="email" className={'p-[20px] bg-transparent outline-none text-gray-400 border-[3px] border-gray-400 text-2xl font-bold'} />
 					<textarea
 						className={'p-[20px] bg-transparent outline-none text-gray-400 border-[3px] border-gray-400 text-2xl font-bold'}
-						placeholder="message"
 						cols={30}
 						rows={10}
 					></textarea>

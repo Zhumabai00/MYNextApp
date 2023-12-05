@@ -1,4 +1,3 @@
-"use client"
 import Button from "@/components/button/Button"
 import Image from "next/image"
 // import { FC } from "react"
@@ -34,6 +33,7 @@ const Category: NextPage<MyPageProps> = ({ params }) => {
 	return (
 		<div className={''}>
 			<h1 className={'text-[#53c28b]'}>{params.category}</h1>
+			{/* <p>{router.asPath}</p> */}
 			{data.map((item) => (
 				<div className={'odd:flex-row-reverse flex gap-[50px] mt-12 mb-24'} key={item.id}>
 					<div className={'flex-[1] flex flex-col gap-[20px] justify-center'}>

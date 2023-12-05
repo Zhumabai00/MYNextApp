@@ -1,45 +1,39 @@
-import Image from "next/image"
+import { IPosts } from "@/models/IPosts";
+import { Metadata } from "next";
+import IdCom from "./idcom";
+import React from "react";
 
-// function getData(id: string) {
-// 	const data = items[id as keyof typeof items]
-// 	if (data) {
-// 		return data
-// 	}
-// 	return notFound()
-// }
-export async function generateMetadata({ params }) {
+interface IDataProps {
+	post: IPosts
+	params: {
+		id: number
+	}
+}
+const getData = async (id: number) => {
+
+	const response = await fetch(`http://localhost:3002/posts/${id}`, {
+		cache: "no-store",
+	})
+	// if (!response.ok) {
+	// 	throw new Error("Failed to fetch data");
+
+	// }
+	return response.json()
+}
+export async function generateMetadata({ params }: IDataProps): Promise<Metadata> {
 	const post = await getData(params.id)
 	return {
 		title: post.title,
-		description: post.desc,
-	};
+	}
 }
 
-const BlogApi = ({ params }: any) => {
+
+
+
+const BlogApi = ({ params }: IDataProps) => {
 	return (
 		<div className={"styles.container"}>
-			<div className={'flex'}>
-				<div className={'flex-[1] flex flex-col justify-between'}>
-					<h1 className={'text-4xl'}>{data.title}</h1>
-					<p className={'text-xl'}>{data.desc}</p>
-					<div className={'flex items-center gap-[10px]'}>
-						<Image
-							src={data.img}
-							alt=""
-							width={40}
-							height={40}
-							className={'object-cover rounded-[50%]'}
-						/>
-						<span className={styles.username}>{data.username}</span>
-					</div>
-				</div>
-				<div className={'flex-[1] h-[300px] relative'}>
-					<Image src={data.img} alt="" fill={true} className={'object-cover'} />
-				</div>
-			</div>
-			<div className={'mt-[50px] text-xl font-light text-[#999] text-justify'}>
-				<p className={'styles.text'}>{data.content}</p>
-			</div>
+			<IdCom ids={params.id} />
 		</div>
 	)
 }
